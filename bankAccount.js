@@ -24,13 +24,16 @@ class BankAccount {
   printStatement() {
     let row = "||            date || credit || debit || balance ||\n"
       for(var i = 0; i < this.transactions.length; i ++){
-        // if(!this.transactions[i].includes('-')){
+        if(this.transactions[i].amount > 0 ){
           row += " || " + this.transactions[i].date + " || " + this.transactions[i].amount + " || " + "   || " + this.transactions[i].currentBalance + " || " + "\n";
-        
+        } else {
+          row += " || " + this.transactions[i].date + " || " +  "   || " + this.transactions[i].amount + " || " +  this.transactions[i].currentBalance + " || " + "\n";
+      }
       }
       return row;
   }
 }
+
     
     
     

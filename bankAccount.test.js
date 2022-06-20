@@ -91,4 +91,22 @@ describe('Bank Account', () => {
     expect(bankAccount.printStatement()).toContain(`||            date || credit || debit || balance ||\n || ${mockDate} || 400 ||    || 400 || \n`);
   })
 
+  it('Prints a statement with debit formatting', () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = dd + '/' + mm + '/' + yyyy;
+    
+    const bankAccount = new BankAccount;
+    const mockDate = today;
+    bankAccount.transact(400);
+    bankAccount.transact(-300);
+
+    expect(bankAccount.printStatement()).toContain(`||            date || credit || debit || balance ||\n || ${mockDate} || 400 ||    || 400 || \n || ${mockDate} ||    || -300 || 100 || \n`);
+
+
+
+});
+
 });

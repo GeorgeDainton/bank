@@ -11,8 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "jest": "^28.1.1"
-  },
-  "devDependencies": {
-    "mockdate": "^3.0.5"
   }
 }

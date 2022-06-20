@@ -13,8 +13,9 @@ class BankAccount {
     today = dd + '/' + mm + '/' + yyyy;
     
     const depositRecord = {
+      amount: amount,
       date: today,
-      amount: amount
+      currentBalance : this.balance + amount
     };
     
     this.deposits.push(depositRecord)
@@ -29,8 +30,10 @@ class BankAccount {
     today = dd + '/' + mm + '/' + yyyy;
    
     const withdrawalRecord = {
+      amount: amount,
       date: today,
-      amount: amount
+      currentBalance : this.balance - amount 
+      
     };
     
     this.withdrawals.push(withdrawalRecord)
@@ -38,9 +41,14 @@ class BankAccount {
   }
 
   printStatement() {
-    return `balance 100`
-  }
+    
+    return this.deposits.map(deposit =>
+      (`credit ${deposit.date} ${deposit.amount} balance ${deposit.currentBalance}`)
+      )
 }
+}
+      
+
 
 
 

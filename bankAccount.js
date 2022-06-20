@@ -22,13 +22,22 @@ class BankAccount {
   }
 
   printStatement() {
+    let row = "||            date || credit || debit || balance ||\n"
+      for(var i = 0; i < this.transactions.length; i ++){
+        // if(!this.transactions[i].includes('-')){
+          row += " || " + this.transactions[i].date + " || " + this.transactions[i].amount + " || " + "   || " + this.transactions[i].currentBalance + " || " + "\n";
+        
+      }
+      return row;
+  }
+}
     
-    return this.transactions.map(transaction =>
-      (`credit ${transaction.date} ${transaction.amount} balance ${transaction.currentBalance}`)
-      )
-}
-}
- 
+    
+    
+    // return this.transactions.map(transaction =>
+    //   (`credit ${transaction.date} ${transaction.amount} balance ${transaction.currentBalance}`)
+    //   )
+
       
 
 

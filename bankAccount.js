@@ -19,6 +19,10 @@ class BankAccount {
     this.deposits.push(depositRecord)
     this.balance += amount
   }
+
+  withdraw(amount) {
+    this.balance -= amount
+  }
 }
 
 

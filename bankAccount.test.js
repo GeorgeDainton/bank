@@ -31,4 +31,19 @@ describe('Bank Account', () => {
     
     expect(bankAccount.balance).toEqual(4500);
   });
+
+  it('Adds record of withdrawal with a date and amount to withdrawals array', () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = dd + '/' + mm + '/' + yyyy;
+
+    const bankAccount = new BankAccount;
+    const mockDate = today
+    bankAccount.deposit(1000);
+    bankAccount.withdraw(100);
+
+    expect(bankAccount.withdrawals).toEqual([ { date: mockDate, amount: 100 } ])
+  });
 });

@@ -46,4 +46,12 @@ describe('Bank Account', () => {
 
     expect(bankAccount.withdrawals).toEqual([ { date: mockDate, amount: 100 } ])
   });
+
+  it('Prints a statement that shows the balance', () => {
+    const bankAccount = new BankAccount;
+    bankAccount.deposit(100);
+    
+    expect(bankAccount.printStatement()).toContain('balance 100')
+
+  })
 });

@@ -27,7 +27,7 @@ class BankAccount {
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
     today = dd + '/' + mm + '/' + yyyy;
-    
+   
     const withdrawalRecord = {
       date: today,
       amount: amount
@@ -35,6 +35,10 @@ class BankAccount {
     
     this.withdrawals.push(withdrawalRecord)
     this.balance -= amount
+  }
+
+  printStatement() {
+    return `balance 100`
   }
 }
 

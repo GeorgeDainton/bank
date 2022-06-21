@@ -72,3 +72,6 @@ if you would like to try it out.
 
 # Credit to github user naeglinghaff, from whom I borrowed the printStatement() table format. Repository address here: https://github.com/naeglinghaff/bank_tech_test/blob/master/src/statement.js
 
+# Approach
+
+I decided to structure my code as a single class because the program is simple enough to be able to carry out the three tasks of adding and subtracting funds and printing statements without extracting functionality to other classes. It is much easier to read this way, and I sought to keep the program as simple as possible

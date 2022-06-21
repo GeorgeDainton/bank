@@ -58,3 +58,4 @@ bankAccount.printStatement()
   '21/06/2022 ||        || -48677|| 2225360\n'
 
 ```
+9. An error will be thrown if there are insufficient funds in the account i.e if the user tries to withdraw past 0

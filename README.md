@@ -62,3 +62,12 @@ Expected output:
 ```
 9. An error will be thrown if there are insufficient funds in the account i.e if the user tries to withdraw past 0
 
+10. I have an alternate version on the main branch, which uses a a deposit and withdraw method instead of a single transact method. Use the command: 
+```
+git checkout main 
+
+```
+
+if you would like to try it out.
+
+# Credit to github user naeglinghaff, from whom I borrowed the printStatement() table format. Repository address here: https://github.com/naeglinghaff/bank_tech_test/blob/master/src/statement.js

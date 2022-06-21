@@ -50,6 +50,8 @@ bankAccount.transact(794867)
 bankAccount.transact(-48677)
 bankAccount.printStatement()
 
+Expected output:
+
 'date         || credit || debit || balance\n' +
   '21/06/2022 || 909486 ||       || 909486\n' +
   '21/06/2022 ||        || -88993|| 820493\n' +
@@ -59,3 +61,4 @@ bankAccount.printStatement()
 
 ```
 9. An error will be thrown if there are insufficient funds in the account i.e if the user tries to withdraw past 0
+

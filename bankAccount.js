@@ -13,7 +13,7 @@ class BankAccount {
     today = dd + '/' + mm + '/' + yyyy;
     
     if(this.balance + amount < 0) {
-      throw ('Insufficient funds')
+      console.log('Insufficient funds')
     } else {
     const transactionRecord = {
       amount: amount,
@@ -24,6 +24,7 @@ class BankAccount {
     this.balance += amount
     }
   }
+  
 
   printStatement() {
     let row = `date         || credit || debit || balance\n`

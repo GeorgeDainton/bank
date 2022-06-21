@@ -2,7 +2,7 @@
 
 # To Start
 
-Clone the repository from [myrepourl] and switch into the directory
+Clone the repository from [https://github.com/GeorgeDainton/bank] and switch into the directory
 
 # Setup our environment to use node latest version
 $ nvm use node

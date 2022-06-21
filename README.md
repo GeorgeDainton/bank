@@ -62,7 +62,7 @@ Expected output:
 ```
 9. An error will be thrown if there are insufficient funds in the account i.e if the user tries to withdraw past 0
 
-10. I have an alternate version on the transaction branch, which uses a single .transact method with negative and positive intgers instead of deposit and withdraw methods. Use the command: 
+10. I have an alternate version on the transaction branch, which uses a single transact method with negative and positive intgers instead of deposit and withdraw methods. Use the command: 
 ```
 git checkout transact 
 

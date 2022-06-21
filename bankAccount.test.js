@@ -63,4 +63,10 @@ describe('Bank Account', () => {
 
     expect(bankAccount.printStatement()).toContain(`date         || credit || debit || balance\n${mockDate} || 400 ||       || 400\n${mockDate} ||        || -300|| 100\n`);
   });
+
+  it('Throws error if withdrawal would result in a negative balance', () => {
+    const bankAccount = new BankAccount;
+    
+    expect(function(){ bankAccount.transact(-1); }).toThrow('Insufficient funds')
+  })
 });

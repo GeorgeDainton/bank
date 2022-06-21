@@ -5,20 +5,24 @@ class BankAccount {
   }
 
   transact(amount) {
+    //to format the date per the specification
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
     today = dd + '/' + mm + '/' + yyyy;
     
+    if(this.balance + amount < 0) {
+      throw ('Insufficient funds')
+    } else {
     const transactionRecord = {
       amount: amount,
       date: today,
       currentBalance : this.balance + amount
     };
-    
     this.transactions.push(transactionRecord)
     this.balance += amount
+    }
   }
 
   printStatement() {

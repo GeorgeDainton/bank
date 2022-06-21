@@ -62,6 +62,10 @@ Expected output:
 ```
 9. An error will be thrown if there are insufficient funds in the account i.e if the user tries to withdraw past 0
 
+Code Screenshot
+
+![](images/codescreenshot.png)
+
 10. I have an alternate version on the main branch, which uses a a deposit and withdraw method instead of a single transact method. Use the command: 
 ```
 git checkout main 

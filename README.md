@@ -24,7 +24,7 @@ $ npm install -g jest
 This is a bank account app that can be run from the command line using node
 
 1. Start node using the command $ node in the terminal
-2. Copy the contents of bankAccount.js from lines 1 to 35 and paste into the node terminal, and press enter. This will laod the code so it's ready to use
+2. Copy the contents of bankAccount.js from lines 1 to 38 and paste into the node terminal, and press enter. This will laod the code so it's ready to use
 3. Create a new instance of the BankAccount class using:
 ```
 const bankAccount = new BankAccount
